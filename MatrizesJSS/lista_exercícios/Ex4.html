@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4</title>
+</head>
+
+<body>
+    <script>
+        var matriz = [
+
+        ]
+
+        var num_listas1 = 0
+
+        var num_listas2 = 0
+
+        var num_linhas = parseInt(prompt("Digite o número de linhas:"))
+
+        while (num_linhas > 0) {
+            lista = []
+            var num_colunas = parseInt(prompt("Digite o número de colunas:"))
+            while (num_colunas > 0) {
+                var valor_elemento = parseFloat(prompt("Digite o valor do elemento:"))
+                lista.push(valor_elemento)
+                num_colunas -= 1
+            }
+            num_linhas -= 1
+            num_listas1 += 1
+            matriz.push(lista)
+        }
+
+        var matriz2 = [
+
+        ]
+
+        var num_linhas2 = parseInt(prompt("Digite o número de linhas:"))
+
+        while (num_linhas2 > 0) {
+            lista2 = []
+            var num_colunas2 = parseInt(prompt("Digite o número de colunas:"))
+            while (num_colunas2 > 0) {
+                var valor_elemento2 = parseFloat(prompt("Digite o valor do elemento:"))
+                lista2.push(valor_elemento2)
+                num_colunas2 -= 1
+            }
+            num_linhas2 -= 1
+            num_listas2 += 1
+            matriz2.push(lista2)
+        }
+
+        var id = "São idênticas"
+
+        if (num_listas1 != num_listas2) {
+            id = "Não são idênticas"
+        }
+        else {
+            for (var linha = 0; linha < matriz.length; linha++) {
+                for (var coluna = 0; coluna < matriz[linha].length; coluna++) {
+                    if (matriz[linha][coluna] != matriz2[linha][coluna]) {
+                        id = "Não são idênticas"
+                    }
+                }
+            }
+        }
+
+        alert(id)
+
+        console.log(matriz)
+        console.log(matriz2)
+    </script>
+</body>
+
+</html>

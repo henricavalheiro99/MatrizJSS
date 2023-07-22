@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3</title>
+</head>
+
+<body>
+    <script>
+        var matriz = [
+
+        ]
+
+        var num_linhas = parseInt(prompt("Digite o número de linhas:"))
+
+        var maior_numero = 0
+
+        while (num_linhas > 0) {
+            lista = []
+            var num_colunas = parseInt(prompt("Digite o número de colunas:"))
+            while (num_colunas > 0) {
+                var valor_elemento = parseFloat(prompt("Digite o valor do elemento:"))
+                lista.push(valor_elemento)
+                num_colunas -= 1
+                if (valor_elemento > maior_numero){
+                    maior_numero = valor_elemento
+                }
+            }
+            num_linhas -= 1
+            matriz.push(lista)
+        }
+
+        var menor_numero = matriz[0][0]
+
+        for (linha of matriz){
+            for (coluna of linha){
+                if (coluna < menor_numero){
+                    menor_numero = coluna
+                }
+            }
+        }
+
+        alert("O maior número é: " + maior_numero + "\nO menor número é: " + menor_numero)
+    </script>
+</body>
+
+</html>
