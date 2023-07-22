@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2</title>
+</head>
+<body>
+    <script>
+        var num_multiplicador = parseInt(prompt("Escolha o número multiplicador da matriz:"))
+
+        var matriz = [
+
+        ]
+
+        var num_linhas = parseInt(prompt("Digite o número de linhas:"))
+
+        while (num_linhas > 0){
+            lista = []
+            var num_colunas = parseInt(prompt("Digite o número de colunas:"))
+            while (num_colunas > 0){
+                var valor_elemento = parseFloat(prompt("Digite o valor do elemento:"))
+                lista.push(valor_elemento * num_multiplicador)
+                num_colunas -= 1
+            }
+            num_linhas -= 1
+            matriz.push(lista)
+        }
+
+        console.log(matriz)
+
+
+    </script>
+</body>
+</html>

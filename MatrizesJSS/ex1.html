@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1</title>
+</head>
+<body>
+    <script>
+        var matriz = [
+            // [1, 2, 3],
+            // [4, 5, 6]
+        ]
+
+        var num_linhas = parseInt(prompt("Digite o número de linhas da matriz:"))
+
+        var multiplicacao = 1
+
+        while (num_linhas > 0){
+            var lista = []
+            var num_colunas = parseInt(prompt("Digite o número de colunas da matriz:"))
+            while (num_colunas > 0) {
+                var valor_elemento = parseFloat(prompt("Digite o valor do elemento:"))
+                lista.push(valor_elemento)
+                if (valor_elemento %2 == 0){
+                    multiplicacao = multiplicacao * valor_elemento
+                }
+                num_colunas -= 1
+            }
+            num_linhas -= 1
+            matriz.push(lista)
+        }
+        
+        // o primeiro for percorre as linhas na matriz
+        // o segundo for percorre os elementos em cada linha
+        // for (linha of matriz){
+        //     for (coluna of linha){
+        //         if (coluna %2 == 0){
+        //             multiplicacao = multiplicacao * coluna
+        //         }
+        //     }
+        // }
+
+        alert("O valor da multiplicação dos pares é: " + multiplicacao)
+
+        console.log(matriz)
+    </script>
+</body>
+</html>
