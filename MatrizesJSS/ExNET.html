@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome, email, telefone</title>
+</head>
+
+<body>
+    <script>
+        var matriz = [
+
+        ]
+
+        while (true) {
+            lista = []
+            nome = prompt("Digite seu nome:")
+            email = prompt("Digite seu email:")
+            telefone = prompt("Digite seu telefone:")
+            lista.push(nome)
+            lista.push(email)
+            lista.push(telefone)
+            
+            matriz.push(lista)
+
+            var pergunta = parseInt(prompt("Deseja cadastrar outro usuário? \n 1- Sim \n 2- Não"))
+            if (pergunta == 2){
+                break
+            }
+        }
+
+        console.log(matriz)
+    </script>
+</body>
+
+</html>
