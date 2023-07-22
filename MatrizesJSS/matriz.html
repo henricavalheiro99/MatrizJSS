@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz</title>
+</head>
+<body>
+    <script>
+        var matriz = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ]
+
+        var soma = 0
+
+        // o primeiro for percorre a linha da matriz e vai até o final dela (matriz.length)
+        // o segundo for percorre a coluna para pegar o elemento, pasaando em cada linha até o final dela (matriz[percorre_linha].length)
+        // para somar é só adicionar o valor que está setado a partir de ambas as variáveis (matriz[percorre_linha][percorre_coluna])
+        for (var percorre_linha = 0; percorre_linha < matriz.length; percorre_linha++){
+            for (var percorre_coluna = 0; percorre_coluna < matriz[percorre_linha].length; percorre_coluna++){
+                soma += matriz[percorre_linha][percorre_coluna]
+            }
+        }
+
+        console.log(soma)
+    </script>
+</body>
+</html>
